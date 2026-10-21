@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="56" viewBox="0 0 240 56" role="img" aria-label="AI Intercept">
+  <rect x="2" y="4" width="48" height="48" rx="12" fill="#0F2A4A"/>
+  <line x1="10" y1="42" x2="42" y2="14" stroke="#16A3A0" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="10" cy="42" r="4" fill="#16A3A0"/>
+  <text x="26" y="45" font-family="Georgia, serif" font-size="15" font-style="italic" fill="#FFFFFF">&#946;&#8320;</text>
+  <text x="62" y="27" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#0F2A4A">AI Intercept</text>
+  <text x="62" y="45" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" letter-spacing="1.2" fill="#5B6B7F">AIINTERCEPT.ONLINE</text>
+</svg>

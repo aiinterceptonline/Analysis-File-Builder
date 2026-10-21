@@ -1,0 +1,378 @@
+{
+ "labels": {
+  "hb_clean": "Haemoglobin g/dL - cleaned (001054 corrected to 11.4; <2 or >20 missing)",
+  "hba1c_clean": "HbA1c % - cleaned (011066 corrected to 5.0; <3 or >20 missing)",
+  "edu_clean": "Education years - cleaned (>25 missing)",
+  "menarche_clean": "Age at menarche - cleaned (<8 or >20 missing)",
+  "income_clean": "Monthly household income - cleaned (<500 missing)",
+  "food_score_clean": "Food insecurity frequency score 0-24 - cleaned (all items blank = missing)",
+  "sedentary_min_day": "Sedentary time min/day (GPAQ Q16; >960 missing)",
+  "flag_age": "Check: age <18 or >35",
+  "flag_edu": "Check: education years >20",
+  "flag_menarche": "Check: menarche <9 or >18",
+  "flag_bmi_low": "Check: BMI <15",
+  "flag_height_low": "Check: height <140 cm",
+  "flag_hb": "Check: Hb <5 or >18 (raw)",
+  "flag_hba1c": "Check: HbA1c <3.5 or >15 (raw)",
+  "flag_sleep_eff": "Check: PSQI sleep efficiency >100% (hours slept > time in bed)",
+  "flag_pulse": "Check: pulse <45 or >130",
+  "flag_income": "Check: income <500",
+  "flag_parity": "Check: living children >=5 or stillbirths >=4",
+  "flag_name_mismatch": "Check: name/husband name differs from master in a data file",
+  "flag_any": "Any data-quality flag",
+  "age_grp": "Age group (years)",
+  "edu_cat": "Education level",
+  "income_log": "Log of monthly household income",
+  "sli_cat": "Standard of Living Index (NFHS-2 cut-offs)",
+  "fies_raw": "Food insecurity raw score: number of YES items (0-8)",
+  "fies_cat": "Food insecurity category (provisional FIES raw-score cut-offs)",
+  "food_insecure_any": "Any food insecurity (any item YES)",
+  "menarche_early": "Early menarche (<12 years)",
+  "living_cat": "Number of living children (grouped)",
+  "abortion_any": "Any previous abortion",
+  "stillbirth_any": "Any previous stillbirth",
+  "ever_pregnant": "Ever pregnant (any living child, abortion or stillbirth)",
+  "bmi_who": "BMI category - WHO",
+  "bmi_asian": "BMI category - WHO Asian cut-offs (23 / 27.5)",
+  "underweight": "Underweight (BMI <18.5)",
+  "short_stature": "Short stature (height <145 cm)",
+  "htn": "Hypertension (SBP >=140 or DBP >=90)",
+  "bp_cat": "Blood pressure category (ACC/AHA 2017)",
+  "anaemia": "Anaemia (Hb <12 g/dL, WHO non-pregnant women)",
+  "anaemia_sev": "Anaemia severity (WHO)",
+  "glyc_cat": "Glycaemic status by HbA1c (ADA)",
+  "rbs_high": "Random blood sugar >=200 mg/dL",
+  "diabetes_any": "Diabetes (HbA1c >=6.5 or RBS >=200)",
+  "phq9_cat": "PHQ-9 depression severity",
+  "depression": "Depression (PHQ-9 >=10)",
+  "phq9_item9_pos": "PHQ-9 item 9 positive (thoughts of self-harm) - SAFETY",
+  "psqi_c1_std": "PSQI C1 subjective sleep quality (standard scoring)",
+  "psqi_c2_std": "PSQI C2 sleep latency (standard scoring)",
+  "psqi_c3_std": "PSQI C3 sleep duration (standard scoring)",
+  "psqi_c4_std": "PSQI C4 habitual sleep efficiency (standard scoring)",
+  "psqi_c5_std": "PSQI C5 sleep disturbances (standard scoring)",
+  "psqi_c6_std": "PSQI C6 sleep medication (standard scoring)",
+  "psqi_c7_std": "PSQI C7 daytime dysfunction (standard scoring)",
+  "psqi_global_std": "PSQI global score 0-21 (standard scoring)",
+  "poor_sleep": "Poor sleep quality (PSQI global >5)",
+  "sleep_eff_pct": "Habitual sleep efficiency % (capped at 100)",
+  "sleep_dur_cat": "Sleep duration (PSQI Q4 hours)",
+  "pa_vig_work_min": "GPAQ vigorous work min/week",
+  "pa_mod_work_min": "GPAQ moderate work min/week",
+  "pa_travel_min": "GPAQ walking/cycling travel min/week",
+  "pa_vig_rec_min": "GPAQ vigorous recreation min/week",
+  "pa_mod_rec_min": "GPAQ moderate recreation min/week",
+  "pa_met_total": "GPAQ total physical activity MET-min/week",
+  "pa_meets_who": "Meets WHO physical activity recommendation (>=600 MET-min/week)",
+  "has_anthro": "Has height and weight",
+  "has_bp": "Has SBP and DBP",
+  "has_hb": "Has Hb (cleaned)",
+  "has_hba1c": "Has HbA1c (cleaned)",
+  "has_phq9": "Has PHQ-9 score",
+  "has_gse": "Has GSE score",
+  "has_psqi": "Has PSQI global score (standard)",
+  "has_repro": "Has reproductive history",
+  "complete_core": "Complete core data (anthro, BP, Hb, PHQ-9, GSE, PSQI, reproductive)"
+ },
+ "value_labels": {
+  "flag_age": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_edu": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_menarche": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_bmi_low": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_height_low": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_hb": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_hba1c": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_sleep_eff": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_pulse": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_income": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_parity": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_name_mismatch": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "flag_any": {
+   "0": "OK",
+   "1": "Check"
+  },
+  "age_grp": {
+   "1": "<20",
+   "2": "20-24",
+   "3": "25-29",
+   "4": "30+"
+  },
+  "edu_cat": {
+   "0": "None",
+   "1": "Primary (1-5 y)",
+   "2": "Secondary (6-10 y)",
+   "3": "Higher secondary (11-12 y)",
+   "4": "Graduate or above (13+ y)"
+  },
+  "sli_cat": {
+   "1": "Low (0-14)",
+   "2": "Medium (15-24)",
+   "3": "High (25-67)"
+  },
+  "fies_cat": {
+   "0": "Food secure (0)",
+   "1": "Mild (1-3)",
+   "2": "Moderate (4-6)",
+   "3": "Severe (7-8)"
+  },
+  "food_insecure_any": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "menarche_early": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "living_cat": {
+   "0": "None",
+   "1": "One",
+   "2": "Two or more"
+  },
+  "abortion_any": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "stillbirth_any": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "ever_pregnant": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "bmi_who": {
+   "1": "Underweight <18.5",
+   "2": "Normal 18.5-24.9",
+   "3": "Overweight 25-29.9",
+   "4": "Obese 30+"
+  },
+  "bmi_asian": {
+   "1": "Underweight <18.5",
+   "2": "Normal 18.5-22.9",
+   "3": "Overweight 23-27.4",
+   "4": "Obese 27.5+"
+  },
+  "underweight": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "short_stature": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "htn": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "bp_cat": {
+   "1": "Normal",
+   "2": "Elevated",
+   "3": "Stage 1 hypertension",
+   "4": "Stage 2 hypertension"
+  },
+  "anaemia": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "anaemia_sev": {
+   "0": "None (>=12)",
+   "1": "Mild (11-11.9)",
+   "2": "Moderate (8-10.9)",
+   "3": "Severe (<8)"
+  },
+  "glyc_cat": {
+   "1": "Normal (<5.7)",
+   "2": "Prediabetes (5.7-6.4)",
+   "3": "Diabetes (>=6.5)"
+  },
+  "rbs_high": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "diabetes_any": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "phq9_cat": {
+   "0": "None (0-4)",
+   "1": "Mild (5-9)",
+   "2": "Moderate (10-14)",
+   "3": "Moderately severe (15-19)",
+   "4": "Severe (20-27)"
+  },
+  "depression": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "phq9_item9_pos": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "poor_sleep": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "sleep_dur_cat": {
+   "1": "<7 hours",
+   "2": "7-9 hours",
+   "3": ">9 hours"
+  },
+  "pa_meets_who": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "has_anthro": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "has_bp": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "has_hb": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "has_hba1c": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "has_phq9": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "has_gse": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "has_psqi": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "has_repro": {
+   "0": "No",
+   "1": "Yes"
+  },
+  "complete_core": {
+   "0": "No",
+   "1": "Yes"
+  }
+ },
+ "psqi_item_labels": {
+  "lsb_sle_psqi9": "PSQI Q6 subjective sleep quality (REDCap item 9)",
+  "lsb_sle_psqi6": "PSQI Q7 sleep medication (REDCap item 6)",
+  "lsb_sle_psqi7": "PSQI Q8 trouble staying awake (REDCap item 7)",
+  "lsb_sle_psqi8": "PSQI Q9 enthusiasm (REDCap item 8)"
+ },
+ "order": [
+  "hb_clean",
+  "hba1c_clean",
+  "edu_clean",
+  "menarche_clean",
+  "income_clean",
+  "food_score_clean",
+  "sedentary_min_day",
+  "flag_age",
+  "flag_edu",
+  "flag_menarche",
+  "flag_bmi_low",
+  "flag_height_low",
+  "flag_hb",
+  "flag_hba1c",
+  "flag_sleep_eff",
+  "flag_pulse",
+  "flag_income",
+  "flag_parity",
+  "flag_name_mismatch",
+  "flag_any",
+  "age_grp",
+  "edu_cat",
+  "income_log",
+  "sli_cat",
+  "fies_raw",
+  "fies_cat",
+  "food_insecure_any",
+  "menarche_early",
+  "living_cat",
+  "abortion_any",
+  "stillbirth_any",
+  "ever_pregnant",
+  "bmi_who",
+  "bmi_asian",
+  "underweight",
+  "short_stature",
+  "htn",
+  "bp_cat",
+  "anaemia",
+  "anaemia_sev",
+  "glyc_cat",
+  "rbs_high",
+  "diabetes_any",
+  "phq9_cat",
+  "depression",
+  "phq9_item9_pos",
+  "psqi_c1_std",
+  "psqi_c2_std",
+  "psqi_c3_std",
+  "psqi_c4_std",
+  "sleep_eff_pct",
+  "psqi_c5_std",
+  "psqi_c6_std",
+  "psqi_c7_std",
+  "psqi_global_std",
+  "poor_sleep",
+  "sleep_dur_cat",
+  "pa_vig_work_min",
+  "pa_mod_work_min",
+  "pa_travel_min",
+  "pa_vig_rec_min",
+  "pa_mod_rec_min",
+  "pa_met_total",
+  "pa_meets_who",
+  "has_anthro",
+  "has_bp",
+  "has_hb",
+  "has_hba1c",
+  "has_phq9",
+  "has_gse",
+  "has_psqi",
+  "has_repro",
+  "complete_core"
+ ]
+}

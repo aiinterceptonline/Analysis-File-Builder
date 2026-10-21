@@ -1,0 +1,8 @@
+# never commit participant data
+*.xlsx
+*.xls
+*.csv
+*.sav
+*.zip
+__pycache__/
+.streamlit/secrets.toml
